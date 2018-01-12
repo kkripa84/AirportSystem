@@ -15,6 +15,8 @@ import org.junit.runners.Suite;
 /**
  *
  * @author R KRISHNA KRIPA
+ 
+ 
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({com.mycompany.baggagefinalans.structure.main.AlgoMapIT.class})
@@ -35,5 +37,14 @@ public class MainITSuite {
     @After
     public void tearDown() throws Exception {
     }
+	
+	/
+// CONSTRUCTION: with no parameters.
+//
+// ******************PUBLIC OPERATIONS**********************
+// void addEdge( String v, String w )
+//                              --> Add additional edge
+// void printPath( String w )   --> Print path after alg is run
+// void unweighted( String s )  --> Single-source unweighted
     
 }

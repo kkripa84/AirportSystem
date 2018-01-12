@@ -71,7 +71,24 @@ public class AlgoMap {
 		}
 
 	}
-        
+
+/** public class Graph
+{
+    public static final int INFINITY = Integer.MAX_VALUE;
+    private Map<String,Vertex> vertexMap = new HashMap<String,Vertex>( );
+
+    /**
+     * Add a new edge to the graph.
+     
+    public void addEdge( String sourceName, String destName )
+    {
+        Vertex v = getVertex( sourceName );
+        Vertex w = getVertex( destName );
+        v.adj.add( w );
+    }
+	
+	**/
+	
         private int getDist(Node node, Node target) {
 		for (Lane edge : lanes) {
 			if (edge.getStart_node().equals(node)
@@ -109,6 +126,23 @@ public class AlgoMap {
 		}
 		return minimum;
 	}
+	
+	
+    /**
+     * Driver routine to print total distance.
+     * It calls recursive routine to print shortest path to
+     * destNode after a shortest path algorithm has run.
+     
+    public void printPath( String destName )
+    {
+
+        {
+            System.out.print( "(Distance is: " + w.dist + ") " );
+            printPath( w );
+            System.out.println( );
+        }
+    }
+	*/
 
 	private boolean isSettled(Node vertex) {
 		return finalisedVertexs.contains(vertex);
@@ -141,6 +175,15 @@ public class AlgoMap {
 			step = prenodes.get(step);
 			path.add(step);
 		}
+		
+		        /*Vertex w = vertexMap.get( destName );
+        if( w == null )
+            throw new NoSuchElementException( "Destination vertex not found" );
+        else if( w.dist == INFINITY )
+            System.out.println( destName + " is unreachable" );
+        else
+		**/
+		
 		// Put it into the correct order
 		Collections.reverse(path);
 		Map<Integer,LinkedList<Node>> map = new HashMap<>();

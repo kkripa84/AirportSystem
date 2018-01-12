@@ -20,6 +20,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
+
+
 import junit.framework.TestCase;
 
 /**
@@ -107,6 +110,15 @@ public class AlgoMapIT extends TestCase{
     }
 
   }
+  
+  // void addEdge( String v, String w )
+//                              --> Add additional edge
+// void printPath( String w )   --> Print path after alg is run
+// void unweighted( String s )  --> Single-source unweighted
+// ******************ERRORS*********************************
+// Some error checking is performed to make sure graph is ok,
+// and to make sure graph satisfies properties needed by each
+// algorithm.  Exceptions are thrown if errors are detected.
   
   private void getRoute(Map.Entry<String,Node[]> bag) {
     String bagName=bag.getKey();
